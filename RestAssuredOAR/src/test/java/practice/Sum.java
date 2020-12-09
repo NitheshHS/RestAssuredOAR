@@ -7,6 +7,7 @@ public class Sum {
 	}
 	public static void sum() {
 		System.out.println(200+300);
+		System.out.println("Nithesh");
 	}
 
 }
