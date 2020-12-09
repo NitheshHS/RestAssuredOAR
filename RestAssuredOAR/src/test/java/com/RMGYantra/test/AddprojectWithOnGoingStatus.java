@@ -14,7 +14,7 @@ import junit.framework.Assert;
 public class AddprojectWithOnGoingStatus extends BaseApiClass{
 	@Test
 	public void addProjectWithOnGoingStatusTest() throws Throwable {
-		
+		test=reports.createTest("addProjectWithOnGoingStatusTest");
 		Project project = new Project("Deepak", "09/12/2020", "DeepakProj5", "Ty_02", "On Going", 10);
 		
 		Response res=given()

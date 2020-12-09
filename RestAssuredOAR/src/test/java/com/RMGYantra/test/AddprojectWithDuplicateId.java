@@ -17,6 +17,7 @@ import io.restassured.response.Response;
 public class AddprojectWithDuplicateId extends BaseApiClass{
 	@Test
 	public void addProjectWithDuplicateIDTest() throws Throwable {
+		test=reports.createTest("addProjectWithDuplicateIDTest");
 	Project	project=new Project("Deepak", "9/12/2020", "DeepakProj3", "TY_PROJ_604", "completed", 10);
 	
 	Response res=given()

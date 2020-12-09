@@ -15,6 +15,7 @@ import java.util.concurrent.TimeUnit;
 public class AddProjectInTextFormat extends BaseApiClass{
 	@Test
 	public void addprojectInTextFormat() {
+		test=reports.createTest("addprojectInTextFormat");
 		Project project = new Project("Nithesh", "09/12/2020", "TMRO", "TY_02", "Completed", 10);
 		
 		given()

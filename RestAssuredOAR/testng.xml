@@ -3,10 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-     <class name="com.RMGYantra.test.AddprojectWithOnGoingStatus"/>
       <class name="com.RMGYantra.test.AddSingleProjectWithCreated"/>
+      <class name="com.RMGYantra.test.AddProjectInTextFormat"/>
       <class name="com.RMGYantra.test.AddprojectWithDuplicateId"/>
-     
+      <class name="com.RMGYantra.test.AddprojectWithOnGoingStatus"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

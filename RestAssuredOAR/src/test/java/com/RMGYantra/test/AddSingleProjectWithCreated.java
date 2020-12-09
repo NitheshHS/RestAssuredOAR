@@ -24,6 +24,7 @@ public class AddSingleProjectWithCreated extends BaseApiClass {
 	
 	@Test
 	public void addSingleProjectWithCreatedTest() throws Throwable {
+		test=reports.createTest("addSingleProjectWithCreatedTest");
 		Project project=new Project("Deepak", "9/12/2020", "DeepakProj2", "created", "TY_01", 10);
 		
 		Response res=given()
