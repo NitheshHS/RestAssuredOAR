@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import baseUtils.BaseApiClass;
+import baseUtils.DatabaseLib;
 import baseUtils.IEndPoint;
 import baseUtils.Project;
 import io.restassured.http.ContentType;
@@ -33,7 +34,7 @@ public class AddprojectWithDuplicateId extends BaseApiClass{
 		.log().all();
 	
 	String projectName=res.jsonPath().get("projectName");
-	String actualData=dLib.executeQuery("select * from project",5 , "completed");
+	String actualData=DatabaseLib.executeQuery("select * from project",5 , "completed");
 	Assert.assertEquals("Project is not created", actualData);
 	
 	}

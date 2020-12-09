@@ -14,13 +14,13 @@ import com.mysql.jdbc.Driver;
  *
  */
 public class DatabaseLib {
-	Connection conn;
-	Statement stmt;
+	static Connection conn=null;
+	static Statement stmt=null;
 	/**
 	 * Used to register the driver and create a connection with the database
 	 * @throws Throwable
 	 */
-	public void getConnection() throws Throwable {
+	public static void getConnection() throws Throwable {
 		Driver regdriver=new Driver();
 		DriverManager.registerDriver(regdriver);
 		conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/projects", "root", "root");
@@ -29,7 +29,7 @@ public class DatabaseLib {
 	 * Closes the connection with Database
 	 * @throws Throwable
 	 */
-	public void clodeDBConnection() throws Throwable {
+	public static void clodeDBConnection() throws Throwable {
 		conn.close();
 	}
 	/**
@@ -40,7 +40,7 @@ public class DatabaseLib {
 	 * @return
 	 * @throws Throwable
 	 */
-	public String executeQuery(String query, int columnIndex,String expectedData) throws Throwable {
+	public static String executeQuery(String query, int columnIndex,String expectedData) throws Throwable {
 		stmt=conn.createStatement();
 		ResultSet result=stmt.executeQuery(query);
 		boolean flag=false;

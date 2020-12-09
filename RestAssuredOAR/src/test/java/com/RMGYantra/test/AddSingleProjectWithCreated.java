@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import baseUtils.BaseApiClass;
+import baseUtils.DatabaseLib;
 import baseUtils.IEndPoint;
 import baseUtils.Project;
 import io.restassured.http.ContentType;
@@ -40,7 +41,7 @@ public class AddSingleProjectWithCreated extends BaseApiClass {
 		String actual=res.jsonPath().get("projectName");
 		String msg=res.jsonPath().getString("msg");
 		
-		String expected=dLib.executeQuery("select * from project;", 4, "DeepakProj2");
+		String expected=DatabaseLib.executeQuery("select * from project;", 4, "DeepakProj2");
 	    Assert.assertEquals(expected, actual);
 	    Assert.assertEquals(msg, "Successfully Added");
 	    

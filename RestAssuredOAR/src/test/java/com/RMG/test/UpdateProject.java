@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.*;
 public class UpdateProject {
 	@Test
 	public void updateProjectTest() {
-		HashMap<String, Object> map=new HashMap<>();
+		HashMap<String, Object> map=new HashMap<String, Object>();
 		map.put("createdBy", "Nithesh H S");
 		map.put("createdOn", "12/08/2020");
 		map.put("projectId","TY_01");
